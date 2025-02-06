@@ -43,22 +43,34 @@ generate-setup-file = false
 python = ">=3.8,<3.13"
 
 # Dependencies for EDA
-bokeh
-dask
+bokeh = "^2"
+dask = [
+  { version = ">=2022.3.0", extras = ["array", "dataframe", "delayed"], python = "<3.9" },
+  { version = "^2024.4.1", extras = ["array", "dataframe", "delayed"], python = ">=3.9" }
+]
 nltk = "^3.6.7"
-numpy
-pandas
-pydot
-scipy
+numpy = [
+  {version = "^1.24", python = "<3.9"},
+  {version = "^1.26", python = ">=3.9"}
+]
+pandas = [
+  { version = "^1.1", python = "<3.9" },
+  { version = "^2.0", python = ">=3.9" }
+]
+pydot = "^1.4.2"
+scipy = [
+  {version = "^1.8", python = "<3.12"},
+  {version = ">1.8", python = ">=3.12"}
+]
 wordcloud = "^1.8"
 sqlalchemy = "2.0.25"
 
 # Dependencies for Connector
 aiohttp = "^3.6"
 ipywidgets = "^7.5"
-jinja2 =
-jsonpath-ng
-pydantic
+jinja2 = ">=3.0,<3.1"
+jsonpath-ng = "^1.5"
+pydantic = "^1.6"
 tqdm = "^4.48"
 
 # Dependencies for Clean
