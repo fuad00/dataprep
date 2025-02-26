@@ -48,5 +48,5 @@ class UserInterface:
         """Display the GUI."""
         launch(self.df)
 
-        path_to_local_server = "http://localhost:7680"
+        path_to_local_server = "http://0.0.0.0:7680"
         display(IFrame(path_to_local_server, width=900, height=500))
