@@ -1516,6 +1516,6 @@ def launch(df) -> None:
     """
     global index_df
     index_df = df
-    app_kwargs = {"port": 7680, "host": "localhost", "debug": False}
+    app_kwargs = {"port": 7680, "host": "0.0.0.0", "debug": True}
     thread = threading.Thread(target=app.run, kwargs=app_kwargs, daemon=True)
     thread.start()
